@@ -57,7 +57,7 @@ document.querySelectorAll('[data-role]').forEach((button) => button.addEventList
 }));
 
 document.querySelector('#copyAccount').addEventListener('click', async () => {
-  const name = 'MYTHORIA 神闻纪';
+  const name = '上海国际青年当代艺术展SIYA';
   try {
     await navigator.clipboard.writeText(name);
     showToast('公众号名称已复制，请打开微信搜索');

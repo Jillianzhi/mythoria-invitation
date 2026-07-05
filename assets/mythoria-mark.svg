@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title id="title">MYTHORIA 标志</title>
+  <circle cx="60" cy="60" r="55" fill="#ececea"/>
+  <path d="M25 72 43 38l8 14 9-18 9 18 8-14 18 34H82L70 51v25h-9V55l-10 21h-9V51L31 72Z" fill="#0a0b0b"/>
+  <path d="M31 84h58" stroke="#0a0b0b" stroke-width="1" opacity=".45"/>
+  <text x="60" y="94" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" letter-spacing="3" fill="#0a0b0b">MYTHORIA</text>
+</svg>

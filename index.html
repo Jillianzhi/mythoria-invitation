@@ -7,13 +7,26 @@
   <meta name="description" content="一段来自 MYTHORIA：神闻纪的前置信号。">
   <title>MYTHORIA：神闻纪｜前置信号</title>
   <link rel="icon" href="assets/mythoria-mark.svg">
-  <link rel="stylesheet" href="styles.css?v=20260705-1">
+  <link rel="stylesheet" href="styles.css?v=20260708-4">
 </head>
 <body>
+  <div class="opening" id="opening" role="dialog" aria-label="MFB 档案系统启动中">
+    <div class="opening-panel opening-panel--top" aria-hidden="true"></div>
+    <div class="opening-panel opening-panel--bottom" aria-hidden="true"></div>
+    <div class="opening-center" aria-hidden="true">
+      <img src="assets/source/mythoria-logo.png" alt="">
+      <span>MYTHORIA</span>
+    </div>
+  </div>
   <a class="skip-link" href="#deck">进入讯息</a>
   <header class="topbar">
     <div class="brand"><img src="assets/source/mythoria-logo.png" alt=""><span><b>MFB</b><i>/</i>MYTHORIA</span></div>
-    <div class="counter"><span id="currentPage">01</span><i><b id="progress"></b></i><span>07</span></div>
+    <div class="topbar-actions">
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false" aria-label="关闭背景音乐">
+        <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><b id="soundLabel">MUSIC ON</b>
+      </button>
+      <div class="counter"><span id="currentPage">01</span><i><b id="progress"></b></i><span>07</span></div>
+    </div>
   </header>
 
   <main class="deck" id="deck" aria-live="polite">
@@ -24,7 +37,6 @@
         <p class="eyebrow">检测到未译信号</p>
         <h1>你已接收到一段<br>来自 <strong>MYTHORIA</strong> 的讯息</h1>
       </div>
-      <button class="tap-hint" type="button" data-next>点击接收 <i>→</i></button>
     </section>
 
     <section class="slide slide--message" data-index="1" aria-hidden="true">
@@ -35,18 +47,19 @@
         <p>它曾被归入误拍、传闻、旧新闻，<br>和无法确认的自然异常。</p>
         <p class="bright">现在，档案重新开启。</p>
       </div>
-      <button class="tap-hint" type="button" data-next>继续 <i>→</i></button>
     </section>
 
     <section class="slide slide--archive" data-index="2" aria-hidden="true">
-      <div class="media media--archive"></div><div class="shade shade--archive"></div><div class="texture"></div>
+      <video class="chapter-video" data-video-page="2" muted loop playsinline webkit-playsinline preload="metadata" poster="assets/source/xuanwu-archive.jpg" aria-hidden="true">
+        <source src="assets/chapter-03-video.mp4" type="video/mp4">
+      </video>
+      <div class="shade shade--archive"></div><div class="texture"></div>
       <div class="archive-label"><span>ARCHIVE 001</span><b>城寨玄武</b><small>COORDINATES / 22.302725, 114.218369</small></div>
       <div class="copy copy--archive">
         <p class="eyebrow">LOST RECORD / 封存档案</p>
         <h2>在 MYTHORIA，<br>神话并非虚构。</h2>
         <p>它们是被误读、被遗忘、<br>被压缩进新闻与传闻里的生命记录。</p>
       </div>
-      <button class="tap-hint" type="button" data-next>打开当代记录 <i>→</i></button>
     </section>
 
     <section class="slide slide--rewilded" data-index="3" aria-hidden="true">
@@ -57,18 +70,19 @@
         <h2>它们没有真正消失。</h2>
         <p>多年后，玄武停栖于海岸。<br>一座被拆除的城市，在自然中获得第二次生命。</p>
       </div>
-      <button class="tap-hint tap-hint--dark" type="button" data-next>继续调查 <i>→</i></button>
     </section>
 
     <section class="slide slide--brief" data-index="4" aria-hidden="true">
-      <div class="brief-images" aria-hidden="true"><div></div><div></div></div><div class="shade shade--brief"></div><div class="texture"></div>
+      <video class="chapter-video" data-video-page="4" muted loop playsinline webkit-playsinline preload="metadata" poster="assets/source/xuanwu-rewilded.jpg" aria-hidden="true">
+        <source src="assets/chapter-05-video.mp4" type="video/mp4">
+      </video>
+      <div class="shade shade--brief"></div><div class="texture"></div>
       <div class="copy copy--brief">
         <p class="eyebrow">SIYA 2026 / PRE-SIGNAL</p>
         <h2>这不是完整答案。<br>只是一道尚未命名的入口。</h2>
         <p>MFB 神闻野外调查局正在重新检索一批被封存的地点、影像与生物记录。</p>
         <p>你可以停留在入口之外。<br>也可以成为第一批进入档案的人。</p>
       </div>
-      <button class="tap-hint" type="button" data-next>确认身份 <i>→</i></button>
     </section>
 
     <section class="slide slide--identity" data-index="5" aria-hidden="true">
@@ -76,9 +90,11 @@
       <div class="identity-wrap">
         <div class="identity-intro"><p class="eyebrow">MFB / IDENTITY CHECK</p><h2>请选择你在这次调查中的身份</h2><p>你的选择不会改变档案本身，<br>但会改变你进入它的方式。</p></div>
         <div class="identity-options" role="radiogroup" aria-label="调查身份">
-          <button type="button" data-role="观察员"><span>01</span><b>观察员</b><small>抵达、观看，记下第一眼的异常</small><i>→</i></button>
-          <button type="button" data-role="志愿者"><span>02</span><b>志愿者</b><small>整理线索，让更多人听见低频回声</small><i>→</i></button>
-          <button type="button" data-role="共创伙伴"><span>03</span><b>共创伙伴</b><small>为另一个地球补回失落的记录</small><i>→</i></button>
+          <button type="button" data-role="田野观察员"><span>01</span><b>田野观察员</b><small>观察员｜观看、抵达、感知异常，成为第一批目击者</small><i>→</i></button>
+          <button type="button" data-role="世界维护者"><span>02</span><b>世界维护者</b><small>志愿者｜协助现场、社群传播与观众引导，维持入口秩序</small><i>→</i></button>
+          <button type="button" data-role="档案运营官"><span>03</span><b>档案运营官</b><small>兼职运营｜负责内容发布、活动执行、资料归档与项目协同</small><i>→</i></button>
+          <button type="button" data-role="神闻调查员"><span>04</span><b>神闻调查员</b><small>共创伙伴｜参与档案调查、设定、线索整理与影像建构</small><i>→</i></button>
+          <button type="button" data-role="世界共筑者"><span>05</span><b>世界共筑者</b><small>作品投稿人｜参与世界观、规则、叙事系统与长期扩展</small><i>→</i></button>
         </div>
       </div>
     </section>
@@ -97,12 +113,20 @@
     </section>
   </main>
 
-  <nav class="controls" aria-label="页面控制">
-    <button id="prev" type="button" aria-label="上一面">←</button>
-    <span>点击画面继续</span>
-    <button id="next" type="button" aria-label="下一面">→</button>
-  </nav>
+  <p class="continue-hint" id="continueHint">点击画面继续</p>
+  <div class="copy-fallback" id="copyFallback" role="dialog" aria-modal="true" aria-labelledby="copyFallbackTitle" hidden>
+    <div>
+      <p class="eyebrow">WECHAT / MANUAL COPY</p>
+      <h2 id="copyFallbackTitle">请长按复制公众号名称</h2>
+      <input id="manualAccount" type="text" value="上海国际青年当代艺术展SIYA" readonly aria-label="公众号名称">
+      <small>复制后，打开微信搜索公众号</small>
+      <button id="closeCopyFallback" type="button">完成</button>
+    </div>
+  </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js?v=20260705-1"></script>
+  <audio id="backgroundMusic" autoplay loop preload="auto" playsinline>
+    <source src="assets/mythoria-world.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js?v=20260708-4"></script>
 </body>
 </html>
